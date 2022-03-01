@@ -49,16 +49,11 @@
     ]
   },
   "jest": {
-    "testEnvironment": "jsdom",
     "moduleNameMapper": {
       "\\.css$": "identity-obj-proxy"
     },
     "collectCoverageFrom": [
       "src/**/*.js"
-    ],
-    "coverageReporters": [
-      "text-summary",
-      "lcov"
     ],
     "coverageThreshold": {
       "global": {
