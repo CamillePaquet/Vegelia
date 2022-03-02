@@ -2,6 +2,7 @@ import InputSearch from "./InputSearch";
 import GridCard from "./GridCard";
 import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import data from "../data.json";
 
 import useStyles from "./Home.style";
 
@@ -15,15 +16,13 @@ function Home() {
 
   const recipes = useSelector((state) => state.recipes);
 
-  console.log(recipes);
-
   return (
     <div className={classes.root}>
       <div className={classes.input}>
         <InputSearch></InputSearch>
       </div>
 
-      <GridCard></GridCard>
+      <GridCard recipes={data.recipes}></GridCard>
     </div>
   );
 }
