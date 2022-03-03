@@ -22,7 +22,7 @@ function Home() {
         <InputSearch></InputSearch>
       </div>
 
-      <GridCard recipes={data.recipes}></GridCard>
+      <GridCard recipes={recipes}></GridCard>
     </div>
   );
 }
