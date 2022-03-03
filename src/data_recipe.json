@@ -1,0 +1,303 @@
+{
+  "vegetarian": false,
+  "vegan": false,
+  "glutenFree": false,
+  "dairyFree": false,
+  "veryHealthy": false,
+  "cheap": false,
+  "veryPopular": false,
+  "sustainable": false,
+  "weightWatcherSmartPoints": 9,
+  "gaps": "no",
+  "lowFodmap": false,
+  "aggregateLikes": 129,
+  "spoonacularScore": 31.0,
+  "healthScore": 2.0,
+  "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+  "license": "CC BY 3.0",
+  "sourceName": "Foodista",
+  "pricePerServing": 106.66,
+  "extendedIngredients": [
+    {
+      "id": 10123,
+      "aisle": "Meat",
+      "image": "raw-bacon.png",
+      "consistency": "solid",
+      "name": "bacon",
+      "nameClean": "applewood smoked bacon",
+      "original": "6 slices bacon",
+      "originalName": "bacon",
+      "amount": 6.0,
+      "unit": "slices",
+      "meta": [],
+      "measures": {
+        "us": { "amount": 6.0, "unitShort": "slice", "unitLong": "slices" },
+        "metric": { "amount": 6.0, "unitShort": "slice", "unitLong": "slices" }
+      }
+    },
+    {
+      "id": 2031,
+      "aisle": "Spices and Seasonings",
+      "image": "chili-powder.jpg",
+      "consistency": "solid",
+      "name": "cayenne pepper",
+      "nameClean": "ground cayenne pepper",
+      "original": "1 teaspoon of cayenne pepper",
+      "originalName": "cayenne pepper",
+      "amount": 1.0,
+      "unit": "teaspoon",
+      "meta": [],
+      "measures": {
+        "us": { "amount": 1.0, "unitShort": "tsp", "unitLong": "teaspoon" },
+        "metric": { "amount": 1.0, "unitShort": "tsp", "unitLong": "teaspoon" }
+      }
+    },
+    {
+      "id": 1062047,
+      "aisle": "Spices and Seasonings",
+      "image": "garlic-salt.jpg",
+      "consistency": "solid",
+      "name": "garlic salt",
+      "nameClean": "garlic salt",
+      "original": "2 teaspoons garlic salt or powder",
+      "originalName": "garlic salt or powder",
+      "amount": 2.0,
+      "unit": "teaspoons",
+      "meta": [],
+      "measures": {
+        "us": { "amount": 2.0, "unitShort": "tsps", "unitLong": "teaspoons" },
+        "metric": {
+          "amount": 2.0,
+          "unitShort": "tsps",
+          "unitLong": "teaspoons"
+        }
+      }
+    },
+    {
+      "id": 11420420,
+      "aisle": "Pasta and Rice",
+      "image": "spaghetti.jpg",
+      "consistency": "solid",
+      "name": "long pasta",
+      "nameClean": "spaghetti",
+      "original": "24 long breadsticks",
+      "originalName": "long breadsticks",
+      "amount": 24.0,
+      "unit": "",
+      "meta": [],
+      "measures": {
+        "us": { "amount": 24.0, "unitShort": "", "unitLong": "" },
+        "metric": { "amount": 24.0, "unitShort": "", "unitLong": "" }
+      }
+    },
+    {
+      "id": 2025,
+      "aisle": "Spices and Seasonings",
+      "image": "ground-nutmeg.jpg",
+      "consistency": "solid",
+      "name": "nutmeg",
+      "nameClean": "nutmeg",
+      "original": "1/2 teaspoon of freshly grated nutmeg",
+      "originalName": "freshly grated nutmeg",
+      "amount": 0.5,
+      "unit": "teaspoon",
+      "meta": ["freshly grated"],
+      "measures": {
+        "us": { "amount": 0.5, "unitShort": "tsps", "unitLong": "teaspoons" },
+        "metric": {
+          "amount": 0.5,
+          "unitShort": "tsps",
+          "unitLong": "teaspoons"
+        }
+      }
+    },
+    {
+      "id": 1033,
+      "aisle": "Cheese",
+      "image": "parmesan.jpg",
+      "consistency": "solid",
+      "name": "parmesan",
+      "nameClean": "parmesan",
+      "original": "1 cup grated parmesan",
+      "originalName": "grated parmesan",
+      "amount": 1.0,
+      "unit": "cup",
+      "meta": ["grated"],
+      "measures": {
+        "us": { "amount": 1.0, "unitShort": "cup", "unitLong": "cup" },
+        "metric": {
+          "amount": 236.588,
+          "unitShort": "ml",
+          "unitLong": "milliliters"
+        }
+      }
+    },
+    {
+      "id": 10118368,
+      "aisle": "Ethnic Foods",
+      "image": "rice-paper.jpg",
+      "consistency": "solid",
+      "name": "rice paper",
+      "nameClean": "spring roll wrappers",
+      "original": "You will also need: parchment paper",
+      "originalName": "You will also need: parchment paper",
+      "amount": 4.0,
+      "unit": "servings",
+      "meta": [],
+      "measures": {
+        "us": {
+          "amount": 4.0,
+          "unitShort": "servings",
+          "unitLong": "servings"
+        },
+        "metric": {
+          "amount": 4.0,
+          "unitShort": "servings",
+          "unitLong": "servings"
+        }
+      }
+    }
+  ],
+  "id": 633330,
+  "title": "Bacon Wrapped Breadsticks",
+  "readyInMinutes": 45,
+  "servings": 4,
+  "sourceUrl": "http://www.foodista.com/recipe/2S352DNV/bacon-wrapped-breadsticks",
+  "image": "https://spoonacular.com/recipeImages/633330-556x370.jpg",
+  "imageType": "jpg",
+  "summary": "Bacon Wrapped Breadsticks might be just the hor d'oeuvre you are searching for. This recipe makes 4 servings with <b>264 calories</b>, <b>14g of protein</b>, and <b>20g of fat</b> each. For <b>$1.07 per serving</b>, this recipe <b>covers 8%</b> of your daily requirements of vitamins and minerals. 129 people have made this recipe and would make it again. Head to the store and pick up you will also need: parchment paper, cayenne pepper, garlic salt, and a few other things to make it today. From preparation to the plate, this recipe takes approximately <b>45 minutes</b>. All things considered, we decided this recipe <b>deserves a spoonacular score of 33%</b>. This score is not so super. Try <a href=\"https://spoonacular.com/recipes/prosciutto-wrapped-breadsticks-284645\">Prosciutto-Wrapped Breadsticks</a>, <a href=\"https://spoonacular.com/recipes/prussian-leaf-wrapped-breadsticks-91572\">Prussian Leaf-Wrapped Breadsticks</a>, and <a href=\"https://spoonacular.com/recipes/prosciutto-wrapped-melon-and-breadsticks-52462\">Prosciutto-wrapped Melon And Breadsticks</a> for similar recipes.",
+  "cuisines": [],
+  "dishTypes": ["side dish"],
+  "diets": [],
+  "occasions": [],
+  "winePairing": {},
+  "instructions": "<ol><li>Preheat oven to 350</li><li>Line cookie sheet with parchment paper.</li><li>In a medium size mixing bowl, combine the parmesan, garlic salt, cayenne and nutmeg.</li><li>GENTLY wrap each breadstick with a slice of bacon (so breadsticks dont break), then place wrapped bread sticks on a cookie sheet lined with parchment paper. If you break one, just cut bacon to fit and add to sheet. No one will care if the pieces are small.</li><li>Bake for 15 minutes or until bacon is cooked to your liking.</li><li>Next, roll the breadsticks in cheese & spices. Do this while bacon and breadsticks are still warm, then set aside and let cool. (Peter loves this part!)</li><li>Can be made a day ahead and even taste great cold (hey, its bacon)!</li></ol>",
+  "analyzedInstructions": [
+    {
+      "name": "",
+      "steps": [
+        {
+          "number": 1,
+          "step": "Preheat oven to 350Line cookie sheet with parchment paper.In a medium size mixing bowl, combine the parmesan, garlic salt, cayenne and nutmeg.GENTLY wrap each breadstick with a slice of bacon (so breadsticks dont break), then place wrapped bread sticks on a cookie sheet lined with parchment paper. If you break one, just cut bacon to fit and add to sheet. No one will care if the pieces are small.",
+          "ingredients": [
+            {
+              "id": 1062047,
+              "name": "garlic salt",
+              "localizedName": "garlic salt",
+              "image": "garlic-salt.jpg"
+            },
+            {
+              "id": 1033,
+              "name": "parmesan",
+              "localizedName": "parmesan",
+              "image": "parmesan.jpg"
+            },
+            {
+              "id": 2031,
+              "name": "ground cayenne pepper",
+              "localizedName": "ground cayenne pepper",
+              "image": "chili-powder.jpg"
+            },
+            {
+              "id": 10118192,
+              "name": "cookies",
+              "localizedName": "cookies",
+              "image": "shortbread-cookies.jpg"
+            },
+            {
+              "id": 2025,
+              "name": "nutmeg",
+              "localizedName": "nutmeg",
+              "image": "ground-nutmeg.jpg"
+            },
+            {
+              "id": 10123,
+              "name": "bacon",
+              "localizedName": "bacon",
+              "image": "raw-bacon.png"
+            },
+            {
+              "id": 18064,
+              "name": "bread",
+              "localizedName": "bread",
+              "image": "white-bread.jpg"
+            },
+            {
+              "id": 10018364,
+              "name": "wrap",
+              "localizedName": "wrap",
+              "image": "flour-tortilla.jpg"
+            }
+          ],
+          "equipment": [
+            {
+              "id": 404770,
+              "name": "baking paper",
+              "localizedName": "baking paper",
+              "image": "baking-paper.jpg"
+            },
+            {
+              "id": 404727,
+              "name": "baking sheet",
+              "localizedName": "baking sheet",
+              "image": "baking-sheet.jpg"
+            },
+            {
+              "id": 405907,
+              "name": "mixing bowl",
+              "localizedName": "mixing bowl",
+              "image": "mixing-bowl.jpg"
+            },
+            {
+              "id": 404784,
+              "name": "oven",
+              "localizedName": "oven",
+              "image": "oven.jpg"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "step": "Bake for 15 minutes or until bacon is cooked to your liking.Next, roll the breadsticks in cheese & spices. Do this while bacon and breadsticks are still warm, then set aside and let cool. (Peter loves this part!)Can be made a day ahead and even taste great cold (hey, its bacon)!",
+          "ingredients": [
+            {
+              "id": 1041009,
+              "name": "cheese",
+              "localizedName": "cheese",
+              "image": "cheddar-cheese.png"
+            },
+            {
+              "id": 2035,
+              "name": "spices",
+              "localizedName": "spices",
+              "image": "spices.png"
+            },
+            {
+              "id": 10123,
+              "name": "bacon",
+              "localizedName": "bacon",
+              "image": "raw-bacon.png"
+            },
+            {
+              "id": 0,
+              "name": "roll",
+              "localizedName": "roll",
+              "image": "dinner-yeast-rolls.jpg"
+            }
+          ],
+          "equipment": [
+            {
+              "id": 404784,
+              "name": "oven",
+              "localizedName": "oven",
+              "image": "oven.jpg"
+            }
+          ],
+          "length": { "number": 15, "unit": "minutes" }
+        }
+      ]
+    }
+  ],
+  "originalId": null,
+  "spoonacularSourceUrl": "https://spoonacular.com/bacon-wrapped-breadsticks-633330"
+}

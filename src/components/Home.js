@@ -9,12 +9,14 @@ import useStyles from "./Home.style";
 function Home() {
   const classes = useStyles();
 
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch({ type: "FETCH_RECIPES" });
-  }, [dispatch]);
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch({ type: "FETCH_RECIPES" });
+  // }, [dispatch]);
 
-  const recipes = useSelector((state) => state.recipes);
+  // const recipes = useSelector((state) => state.recipes);
+
+  const recipes = data.recipes;
 
   return (
     <div className={classes.root}>
