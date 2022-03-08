@@ -23,7 +23,6 @@ function Home() {
       <div className={classes.input}>
         <InputSearch></InputSearch>
       </div>
-
       <GridCard recipes={recipes}></GridCard>
     </div>
   );
