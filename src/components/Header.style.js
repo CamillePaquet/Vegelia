@@ -5,7 +5,10 @@ const useStyles = createUseStyles({
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    margin: "0 2em",
+    margin: "1em 2em",
+  },
+  logo: {
+    width: "150px",
   },
   heart: {
     width: "1.5em",
