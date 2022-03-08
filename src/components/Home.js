@@ -3,25 +3,48 @@ import GridCard from "./GridCard";
 import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import data from "../data.json";
+import { useSearchParams } from "react-router-dom";
 
 import useStyles from "./Home.style";
 
 function Home() {
   const classes = useStyles();
+  const [searchParams, setSearchParams] = useSearchParams();
 
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch({ type: "FETCH_RECIPES" });
-  // }, [dispatch]);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch({ type: "FETCH_RECIPES" });
+  }, [dispatch]);
 
-  // const recipes = useSelector((state) => state.recipes);
+  const [value, setValue] = useState(searchParams.get("recipe"));
+  const onChange = useCallback(
+    (event) => {
+      setValue(event.target.value);
+      setSearchParams(event.target.value ? { recipe: event.target.value } : {});
+    },
+    [setSearchParams]
+  );
 
-  const recipes = data.recipes;
+  var recipes = useSelector((state) => state.recipes);
+
+  recipes = recipes.filter((recipe) =>
+    recipe.title.match(new RegExp(value, "i"))
+  );
+
+  useEffect(() => {
+    if (value) {
+      recipes.filter((recipe) =>
+        console.log(
+          recipe.title.toLocaleUpperCase().includes(value.toUpperCase)
+        )
+      );
+    }
+  }, [value]);
 
   return (
     <div className={classes.root}>
       <div className={classes.input}>
-        <InputSearch></InputSearch>
+        <InputSearch value={value} onChange={onChange}></InputSearch>
       </div>
       <GridCard recipes={recipes}></GridCard>
     </div>
