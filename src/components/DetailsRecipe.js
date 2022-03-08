@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FaHourglassStart } from "react-icons/fa";
 import { BsFillPersonFill } from "react-icons/bs";
+import ButtonLike from "./ButtonLike";
 
 import data from "../data.json";
 
@@ -23,54 +24,58 @@ function DetailsRecipe() {
   return (
     <>
       <div className={classes.ingredientsContainer}>
-        <div className={classes.rightContainer}>
-          <img src={recipe.image}></img>
-        </div>
-        <div className={classes.leftContainer}>
-          <h1 className={classes.title}>{recipe.title}</h1>
-          <div className={classes.infosContainer}>
-            <table className={classes.tab}>
-              <thead>
-                <tr>
-                  <th>Quantités</th>
-                  <th>Ingrédients</th>
-                </tr>
-              </thead>
-              <tbody>
-                {recipe.extendedIngredients.map((ingredient, index) => (
-                  <tr key={ingredient.id}>
-                    <td className={classes.listElement}>
-                      {ingredient.measures.metric.amount}{" "}
-                      {ingredient.measures.metric.unitLong}
-                    </td>
-                    <td className={classes.listElement}>{ingredient.name}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-            <ul></ul>
-            <div className={classes.timeContainer}>
-              <p>
-                <FaHourglassStart className={classes.icon} />
-                {recipe.readyInMinutes} minutes
-              </p>
-              <p>
-                <BsFillPersonFill className={classes.icon} />
-                {recipe.servings} personnes
-              </p>
-            </div>
+        <div
+          className={classes.rootContainer}
+          style={{
+            backgroundImage: `url(${recipe.image}) `,
+          }}
+        >
+          <div className={classes.leftContainer}>
+            <h1 className={classes.title}>{recipe.title}</h1>
+            <p>
+              <FaHourglassStart className={classes.icon} />
+              {recipe.readyInMinutes} minutes
+            </p>
+            <ButtonLike />
           </div>
         </div>
       </div>
-      <div className={classes.stageContainer}>
-        {recipe.analyzedInstructions[0].steps.map((step, index) => (
-          <div className={classes.flexLeft}>
-            <li className={classes.listElementStep} key={step.number}>
-              <h2 className={classes.h2}> Etape {step.number}</h2>
-              <p className={classes.descriptionStep}>{step.step}</p>
-            </li>
-          </div>
-        ))}
+      <div className={classes.infosContainer}>
+        <div className={classes.stageContainer}>
+          <h2 className={classes.h2}>
+            Ingredients (<BsFillPersonFill className={classes.icon} />{" "}
+            {recipe.servings})
+          </h2>
+
+          <ul>
+            {recipe.extendedIngredients.map((ingredient, index) => (
+              <li
+                className={classes.listElementIngredients}
+                key={ingredient.id}
+              >
+                <p className={classes.descriptionStep}>
+                  {ingredient.name} :{" "}
+                  <strong>
+                    {" "}
+                    {ingredient.measures.metric.amount}{" "}
+                    {ingredient.measures.metric.unitLong}{" "}
+                  </strong>
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className={classes.stageContainer}>
+          <h2 className={classes.h2}>Preparation</h2>
+          <ul>
+            {recipe.analyzedInstructions[0].steps.map((step, index) => (
+              <li className={classes.listElementStep} key={step.number}>
+                <h3 className={classes.h3}> {step.number}</h3>
+                <p className={classes.descriptionStep}> {step.step}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );
