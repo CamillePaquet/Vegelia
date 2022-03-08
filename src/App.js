@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import createSagaMiddleware from "redux-saga";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
-import { recipeSlice, recipesSlice } from "./slices";
+import { recipeSlice, recipesSlice, favoritesSlice } from "./slices";
 import { rootSaga } from "./sagas";
 import { PersistGate } from "redux-persist/integration/react";
 import { useDispatch } from "react-redux";
@@ -36,6 +36,7 @@ const persistedReducer = persistReducer(
   combineReducers({
     recipes: recipesSlice.reducer,
     recipe: recipeSlice.reducer,
+    favorites: favoritesSlice.reducer,
   })
 );
 const sagaMiddleware = createSagaMiddleware();

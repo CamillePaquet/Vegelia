@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 export const recipesSlice = createSlice({
   name: "recipes",
@@ -18,5 +18,16 @@ export const recipeSlice = createSlice({
   initialState: [],
   reducers: {
     add: (state, action) => action.payload.recipe,
+  },
+});
+
+export const favoritesSlice = createSlice({
+  name: "favorites",
+  initialState: [],
+  reducers: {
+    toggle: (state, action) =>
+      current(state).includes(action.payload.recipe)
+        ? current(state).filter((recipe) => recipe !== action.payload.recipe)
+        : [...state, action.payload.recipe],
   },
 });

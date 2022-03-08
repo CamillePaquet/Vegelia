@@ -1,8 +1,10 @@
 import useStyles from "./CardRecipe.style";
 import { FaHeart } from "react-icons/fa";
+import ButtonLike from "./ButtonLike";
 
 function CardRecipe({ recipe, index }) {
   const classes = useStyles();
+
   var color = "";
   if (index % 2 == 0) {
     color = "green";
@@ -23,7 +25,8 @@ function CardRecipe({ recipe, index }) {
             : classes.green
         }
       >
-        <FaHeart className={classes.icon} />
+        <ButtonLike recipe={recipe} text=""></ButtonLike>
+
         <p className={classes.title}> {recipe.title}</p>
       </div>
       <img
