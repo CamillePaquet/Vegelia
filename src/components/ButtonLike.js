@@ -14,8 +14,15 @@ function ButtonLike({ recipe, text }) {
     dispatch(favoritesSlice.actions.toggle({ recipe }));
   };
 
+  var color;
+
   return (
-    <button onClick={addToFavorite} className={classes.button}>
+    <button
+      onClick={addToFavorite}
+      className={
+        favorites.includes(recipe) ? classes.buttonLiked : classes.button
+      }
+    >
       <FaHeart className={classes.icon} /> {text}
     </button>
   );

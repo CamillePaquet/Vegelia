@@ -29,7 +29,6 @@ const useStyles = createUseStyles({
     backgroundSize: "cover",
     backgroundPosition: "center",
   },
-  img: {},
   infosContainer: {
     display: "grid",
     gridTemplateColumns: "repeat(2, 1fr)",

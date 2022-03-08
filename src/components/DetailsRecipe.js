@@ -36,7 +36,7 @@ function DetailsRecipe() {
               <FaHourglassStart className={classes.icon} />
               {recipe.readyInMinutes} minutes
             </p>
-            <ButtonLike />
+            <ButtonLike recipe={recipe} text="Like" />
           </div>
         </div>
       </div>
