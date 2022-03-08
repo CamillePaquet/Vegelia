@@ -27,19 +27,11 @@ function Home() {
 
   var recipes = useSelector((state) => state.recipes);
 
-  recipes = recipes.filter((recipe) =>
-    recipe.title.match(new RegExp(value, "i"))
-  );
-
-  useEffect(() => {
-    if (value) {
-      recipes.filter((recipe) =>
-        console.log(
-          recipe.title.toLocaleUpperCase().includes(value.toUpperCase)
-        )
-      );
-    }
-  }, [value]);
+  if (value) {
+    recipes = recipes.filter((recipe) =>
+      recipe.title.match(new RegExp(value, "i"))
+    );
+  }
 
   return (
     <div className={classes.root}>
