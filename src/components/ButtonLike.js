@@ -1,10 +1,8 @@
 import useStyles from "./ButtonLike.style";
-import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { favoritesSlice } from "../slices";
 import { FaHeart } from "react-icons/fa";
 function ButtonLike({ recipe, text }) {
-  const [value, setValue] = useState("");
   const classes = useStyles();
 
   const favorites = useSelector((state) => state.favorites);
@@ -13,8 +11,6 @@ function ButtonLike({ recipe, text }) {
     event.preventDefault();
     dispatch(favoritesSlice.actions.toggle({ recipe }));
   };
-
-  var color;
 
   return (
     <button

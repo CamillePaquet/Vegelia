@@ -2,7 +2,7 @@ import InputSearch from "./InputSearch";
 import GridCard from "./GridCard";
 import { useCallback, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import data from "../data.json";
+// import data from "../data.json";
 import { useSearchParams } from "react-router-dom";
 
 import useStyles from "./Home.style";

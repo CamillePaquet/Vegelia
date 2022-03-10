@@ -1,14 +1,12 @@
 import useStyles from "./DetailsRecipe.style";
 import { useParams } from "react-router-dom";
-import { useCallback, useEffect, useState, lazy } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FaHourglassStart } from "react-icons/fa";
 import { BsFillPersonFill } from "react-icons/bs";
-import data from "../data.json";
+// import data from "../data.json";
 
 const ButtonLike = lazy(() => import("./ButtonLike"));
-
-// faire un fetch par id ici
 
 function DetailsRecipe() {
   const classes = useStyles();
@@ -18,6 +16,7 @@ function DetailsRecipe() {
 
   useEffect(() => {
     dispatch({ type: "FETCH_RECIPE", payload: id });
+    // eslint-disable-next-line
   }, [dispatch]);
 
   // const recipe = data.recipes.filter((item) => item.id == id)[0];
@@ -28,6 +27,7 @@ function DetailsRecipe() {
     if (recipe != {} && recipe.id == id) {
       setIsLoading(false);
     }
+    // eslint-disable-next-line
   }, [useSelector((state) => state.recipe)]);
 
   if (!isLoading) {
@@ -46,7 +46,9 @@ function DetailsRecipe() {
                 <FaHourglassStart className={classes.icon} />
                 {recipe.readyInMinutes} minutes
               </p>
-              <ButtonLike recipe={recipe} text="Like" />
+              <Suspense fallback={<div>Loading...</div>}>
+                <ButtonLike recipe={recipe} text="Like" />
+              </Suspense>
             </div>
           </div>
         </div>

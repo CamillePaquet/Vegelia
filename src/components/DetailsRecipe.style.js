@@ -24,8 +24,6 @@ const useStyles = createUseStyles({
     height: "500px",
     position: "relative",
     imageRendering: "auto",
-    imageRendering: "crisp-edges",
-    imageRendering: "pixelated",
     backgroundSize: "cover",
     backgroundPosition: "center",
   },

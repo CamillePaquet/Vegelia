@@ -9,10 +9,10 @@ function Header() {
   return (
     <header className={classes.container}>
       <Link to="/">
-        <img className={classes.logo} src={logo}></img>
+        <img className={classes.logo} src={logo} alt="logo"></img>
       </Link>
       <Link className={classes.favorites} to="/favorites">
-        <img className={classes.heart} src={like}></img>
+        <img className={classes.heart} src={like} alt="like"></img>
         <span>Mes favoris</span>
       </Link>
     </header>

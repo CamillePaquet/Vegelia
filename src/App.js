@@ -5,8 +5,7 @@ import { Provider } from "react-redux";
 import { recipeSlice, recipesSlice, favoritesSlice } from "./slices";
 import { rootSaga } from "./sagas";
 import { PersistGate } from "redux-persist/integration/react";
-import { useDispatch } from "react-redux";
-import { useCallback, useEffect, useState } from "react";
+
 import {
   persistStore,
   persistReducer,

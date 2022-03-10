@@ -1,14 +1,16 @@
-import useStyles from "./Favorites.style";
-import { lazy } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { favoritesSlice } from "../slices";
+import { lazy, Suspense } from "react";
+import { useSelector } from "react-redux";
+
 const GridCard = lazy(() => import("./GridCard"));
 
 function Favorites() {
-  const classes = useStyles();
   const recipes = useSelector((state) => state.favorites);
 
-  return <GridCard recipes={recipes}></GridCard>;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <GridCard recipes={recipes}></GridCard>
+    </Suspense>
+  );
 }
 
 export default Favorites;

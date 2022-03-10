@@ -5,7 +5,7 @@ function Footer() {
 
   return (
     <footer className={classes.root}>
-      <img className={classes.logo} src={logo}></img>
+      <img className={classes.logo} src={logo} alt="logo"></img>
     </footer>
   );
 }

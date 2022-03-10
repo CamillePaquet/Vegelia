@@ -1,15 +1,14 @@
 import useStyles from "./CardRecipe.style";
-import { FaHeart } from "react-icons/fa";
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 const ButtonLike = lazy(() => import("./ButtonLike"));
 
 function CardRecipe({ recipe, index }) {
   const classes = useStyles();
 
   var color = "";
-  if (index % 2 == 0) {
+  if (index % 2 === 0) {
     color = "green";
-  } else if (index % 3 == 1) {
+  } else if (index % 3 === 1) {
     color = "blue";
   } else {
     color = "grey";
@@ -19,14 +18,16 @@ function CardRecipe({ recipe, index }) {
     <div className={classes.root}>
       <div
         className={
-          color == "blue"
+          color === "blue"
             ? classes.blue
-            : color == "grey"
+            : color === "grey"
             ? classes.grey
             : classes.green
         }
       >
-        <ButtonLike recipe={recipe} text=""></ButtonLike>
+        <Suspense fallback={<div>Loading...</div>}>
+          <ButtonLike recipe={recipe} text=""></ButtonLike>
+        </Suspense>
 
         <p className={classes.title}> {recipe.title}</p>
       </div>
