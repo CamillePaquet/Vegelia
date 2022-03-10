@@ -1,6 +1,7 @@
 import useStyles from "./CardRecipe.style";
 import { FaHeart } from "react-icons/fa";
-import ButtonLike from "./ButtonLike";
+import { lazy } from "react";
+const ButtonLike = lazy(() => import("./ButtonLike"));
 
 function CardRecipe({ recipe, index }) {
   const classes = useStyles();

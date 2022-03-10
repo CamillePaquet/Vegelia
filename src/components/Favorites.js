@@ -1,8 +1,8 @@
 import useStyles from "./Favorites.style";
-import GridCard from "./GridCard";
-
+import { lazy } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { favoritesSlice } from "../slices";
+const GridCard = lazy(() => import("./GridCard"));
 
 function Favorites() {
   const classes = useStyles();

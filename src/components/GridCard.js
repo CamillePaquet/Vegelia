@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
+import { lazy } from "react";
 import useStyles from "./GridCard.style";
-import CardRecipe from "./CardRecipe";
+
+import { useCallback, useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+const CardRecipe = lazy(() => import("./CardRecipe"));
 
 function GridCard({ recipes }) {
   const classes = useStyles();
+
   return (
     <div>
       <ul className={classes.root}>
