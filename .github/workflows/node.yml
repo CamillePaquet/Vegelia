@@ -32,5 +32,3 @@ jobs:
           heroku_app_name: "vegelia"
           heroku_email: "camille.paquet@yahoo.com"
           justlogin: true
-        run: |
-          heroku container:login
