@@ -16,7 +16,9 @@ function ButtonLike({ recipe, text }) {
     <button
       onClick={addToFavorite}
       className={
-        favorites.includes(recipe) ? classes.buttonLiked : classes.button
+        Array.from(favorites).includes(recipe)
+          ? classes.buttonLiked
+          : classes.button
       }
     >
       <FaHeart className={classes.icon} /> {text}
