@@ -28,7 +28,7 @@ jobs:
       - name: deploy to heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
-          args: deploy --dir=build --prod
+          args: deploy --prod
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "vegelia"
           heroku_email: "camille.paquet@yahoo.com"
