@@ -24,11 +24,13 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - run: npm test
-      - run: heroku restart --app vegelia
       - name: deploy to heroku
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
-          args: deploy --prod
+          args: deploy --dir=build --prod
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "vegelia"
           heroku_email: "camille.paquet@yahoo.com"
+          justlogin: true
+        run: |
+          heroku container:login
