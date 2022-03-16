@@ -7,9 +7,11 @@ function Favorites() {
   const recipes = useSelector((state) => state.favorites);
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <GridCard recipes={recipes}></GridCard>
-    </Suspense>
+    <div data-testid="content">
+      <Suspense fallback={<div>Loading...</div>}>
+        <GridCard recipes={recipes}></GridCard>
+      </Suspense>
+    </div>
   );
 }
 

@@ -22,7 +22,11 @@ function DetailsRecipe() {
   // const recipe = data.recipes.filter((item) => item.id == id)[0];
 
   var recipe = useSelector((state) => state.recipe);
-
+  console.log(id);
+  if (recipe != {} && recipe.id == id) {
+    console.log("ok");
+    setIsLoading(false);
+  }
   useEffect(() => {
     if (recipe != {} && recipe.id == id) {
       setIsLoading(false);

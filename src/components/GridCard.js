@@ -6,11 +6,12 @@ const CardRecipe = lazy(() => import("./CardRecipe"));
 
 function GridCard({ recipes }) {
   const classes = useStyles();
+  const allRecipes = Array.from(recipes);
 
   return (
     <div>
-      <ul className={classes.root}>
-        {recipes.map((recipe, index) => (
+      <ul className={classes.root} data-testid="content">
+        {allRecipes.map((recipe, index) => (
           <li className={classes.listElement} key={recipe.id}>
             <Link to={`/recipes/${recipe.id}`} className={classes.link}>
               <Suspense fallback={<div>Loading...</div>}>
