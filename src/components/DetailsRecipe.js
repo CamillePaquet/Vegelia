@@ -4,7 +4,6 @@ import { useEffect, useState, lazy, Suspense } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FaHourglassStart } from "react-icons/fa";
 import { BsFillPersonFill } from "react-icons/bs";
-// import data from "../data.json";
 
 const ButtonLike = lazy(() => import("./ButtonLike"));
 
@@ -19,14 +18,8 @@ function DetailsRecipe() {
     // eslint-disable-next-line
   }, [dispatch]);
 
-  // const recipe = data.recipes.filter((item) => item.id == id)[0];
-
   var recipe = useSelector((state) => state.recipe);
-  console.log(id);
-  if (recipe != {} && recipe.id == id) {
-    console.log("ok");
-    setIsLoading(false);
-  }
+
   useEffect(() => {
     if (recipe != {} && recipe.id == id) {
       setIsLoading(false);
